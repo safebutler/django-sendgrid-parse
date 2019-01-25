@@ -114,7 +114,8 @@ class Attachment(models.Model):
         blank=False,
         null=False,
         related_name='attachments',
-        verbose_name=_ugl("Email Attached To")
+        verbose_name=_ugl("Email Attached To",),
+        on_delete=models.CASCADE,
     )
 
     @property
